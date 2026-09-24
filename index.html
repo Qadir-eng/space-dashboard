@@ -1,11 +1,91 @@
  <!doctype 
- html> 
- <html lang="en"> 
-  <head> 
+ html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bruno+Ace&family=Michroma&family=Oxanium:wght@400;500;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Space Dashboard</title>
-     </head> <body> <div id="app"></div>
+     </head> <body>
+      <button id="menuButton">☰</button>
+      <div id="sidebar">
+        <div class="sidebarContent">
+          <h2>SPACEMENU</h2>
+          <button id="quoteButton">Quote of the Day</button>
+          <button id="todoButton">To-Do List</button>
+          <button id="backgroundButton">Background</button>
+ <button id="clockstyleButton">Clock Style</button>
+
+<div id="clockStyleSelector" class="sidebarSelector">
+  <button id="prevClockFont">‹</button>
+  <span id="clockFontName">Digital Ops</span>
+  <button id="nextClockFont">›</button>
+</div>
+<button id="clockcolorButton">Clock Color</button>
+
+<div id="clockColorSelector" class="sidebarSelector">
+  <button id="prevClockColor">‹</button>
+  <span id="clockColorName">White</span>
+  <button id="nextClockColor">›</button>
+  <div class="autoColorRow">
+    <span>Day / Night</span>
+    <button id="autoColorButton" class="toggleSwitch">
+      <span class="toggleKnob"></span>
+    </button>
+  </div>
+</div>
+</div>
+ </div>
+    </div>
+       <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search Google..."/>
+        </div>
+        <div id="shortcuts">
+           <a href="https://youtube.com" target="_blank">YouTube</a>
+  <a href="https://gmail.com" target="_blank">Gmail</a>
+  <a href="https://stardance.hackclub.com" target="_blank">Stardance</a>
+  <a href="https://hackatime.hackclub.com" target="_blank">Hackatime</a>
+        </div>
+        <div id="loadingScreen">
+          Loading Space...
+        </div>
+         <div id="spaceBackground"></div>
+      <div id="backgroundOverlay"></div>
+      <div id="clock">00:00:00</div>
+      <div id="quote">
+        <p id="quoteText">"The universe is under no obligation to make sense to you".</p>
+        <span id="quoteAuthor">— Neil deGrasse Tyson</span>
+      </div>
+      <div id ="todoPanel">
+        <h3>TO-DO</h3>
+        <input type="text" class="todoInput" placeholder="Task 1">
+        <input type="text" class="todoInput" placeholder="Task 2">
+        <input type="text" class="todoInput" placeholder="Task 3">
+        <input type="text" class="todoInput" placeholder="Task 4">
+      </div>
+      <div id="backgroundPanel">
+        <h3>BACKGROUND</h3>
+        <button id="NASA">NASA DAILY</button>
+        <P>NASA Gallery</P>
+        <div id="nasaGallery">
+           <button class="nasaWallpaper" data-bg="/space-dashboard/wallpapers/space1.png"></button>
+            <button class="nasaWallpaper" data-bg="/space-dashboard/wallpapers/space2.png"></button>
+             <button class="nasaWallpaper" data-bg="/space-dashboard/wallpapers/space3.png"></button>
+              <button class="nasaWallpaper" data-bg="/space-dashboard/wallpapers/space4.png"></button>
+               <button class="nasaWallpaper" data-bg="/space-dashboard/wallpapers/space5.png"></button>
+        </div>
+        <p>Solid Colors</p>
+        <div class="bgColors">
+           <button class="bgColor" data-color="#080b16"></button>
+    <button class="bgColor" data-color="#14213d"></button>
+    <button class="bgColor" data-color="#1b263b"></button>
+    <button class="bgColor" data-color="#2b193d"></button>
+        </div>
+      </div>
+      </div>
+        <div id="app"></div>
        <script type="module" src="/src/main.js"></script> 
        </body>
         </html>
